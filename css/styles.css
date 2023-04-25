@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+ 
+    align-content: center;
+}
+
+body {
+    font-family: "PT Sans", sans-serif;
+}
+html{
+    height: 100%;
+    background-color: rgb(22, 22, 22);
+}
+.grid-content > *{
+    text-align: center;
+    border-radius: 25px;
+    background-color: rgb(22, 22, 22);
+    
+ 
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/foto.png);
+    background-size: cover;
+    background-position: center;
+}
+.navbar1{
+    position: fixed;
+    background: #5e083793;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vpx;
+    transition: all 0.5s ease;
+}
+.navbar1.active{
+    background:#ffffff;
+    padding: 15px;
+}
+.navbar1.active .logo,
+.navbar1.active a{
+    color: black;
+}
+.navbar1.active a:hover{
+    background:rgb(255, 255, 255);
+    color: #fff;
+}
+.logo{
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 100;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+    margin:10px;
+}
+.menu li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+.menu li a:hover{
+    padding: 5px 15px;
+    background: #5e0837;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+.rueda{
+    height: 10px;
+}
+.inicio h1{
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+}
+.inicio{
+    text-align: justify;
+}
+.iconos{
+    width: 35%;
+    height: 70%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    width: auto;
+    padding: 10px;
+
+  }
+
+@media(min-width:900px){
+    .grid-content{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "LINK1 LINK2 LINK3"
+        ;
+    }    
+}
